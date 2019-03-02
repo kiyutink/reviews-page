@@ -1,0 +1,114 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "plugins": ["babel", "prettier", "react-hooks"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": "off",
+    "dot-notation": "error",
+    "eqeqeq": "error",
+    "guard-for-in": "error",
+    "no-div-regex": "error",
+    "no-eval": "error",
+    "no-extend-native": "error",
+    "no-extra-bind": "error",
+    "no-implied-eval": "error",
+    "no-implicit-globals": "error",
+    "babel/no-invalid-this": "error",
+    "no-labels": "error",
+    "no-iterator": "error",
+    "no-lone-blocks": "error",
+    "no-multi-str": "error",
+    "no-new": "error",
+    "no-new-func": "error",
+    "no-param-reassign": "error",
+    "no-proto": "error",
+    "no-return-assign": "error",
+    "no-return-await": "error",
+    "no-script-url": "error",
+    "no-self-compare": "error",
+    "no-sequences": "error",
+    "no-unmodified-loop-condition": "error",
+    "no-unused-expressions": "error",
+    "no-useless-call": "error",
+    "no-useless-concat": "error",
+    "no-useless-return": "error",
+    "no-with": "error",
+    "require-await": "error",
+    "yoda": "error",
+    "no-class-assign": "off",
+    "no-undef-init": "error",
+    "no-use-before-define": [
+      "error",
+      { "functions": false, "classes": false, "variables": true }
+    ],
+    "func-name-matching": ["error", "always"],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { "exceptAfterSingleLine": true }
+    ],
+    "max-lines": [
+      "error",
+      { "skipBlankLines": true, "skipComments": true, "max": 750 }
+    ],
+    "max-nested-callbacks": ["error", 4],
+    "max-params": "error",
+    "max-statements": ["error", 50],
+    "new-cap": "error",
+    "no-multi-assign": "error",
+    "no-nested-ternary": "error",
+    "no-unneeded-ternary": "error",
+    "one-var": ["error", "never"],
+    "spaced-comment": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"],
+    "no-duplicate-imports": "error",
+    "no-new-symbol": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-constructor": "error",
+    "no-useless-rename": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "react/no-array-index-key": "error",
+    "react/no-redundant-should-component-update": "error",
+    "react/no-typos": "error",
+    "react/no-this-in-sfc": "error",
+    "react/no-unused-prop-types": "error",
+    "react/no-unused-state": "error",
+    "react/prefer-es6-class": "error",
+    "react/self-closing-comp": "error",
+    "react/void-dom-elements-no-children": "error",
+    "react/jsx-boolean-value": ["error", "always"],
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "ignoreRefs": true,
+        "allowArrowFunctions": true,
+        "allowFunctions": false,
+        "allowBind": false
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "never" }
+    ],
+    "react/jsx-pascal-case": "error",
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".test.js"] }],
+    "react-hooks/rules-of-hooks": "error"
+  }
+}

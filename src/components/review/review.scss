@@ -1,0 +1,47 @@
+.review {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid gainsboro;
+  margin-bottom: 20px;
+
+  &__topRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__image {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    background-color: gainsboro;
+    margin-right: 20px;
+  }
+
+  &__date {
+    margin-right: 20px;
+    width: 100px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  &__stars {
+    margin-right: 20px;
+    width: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    padding-top: 20px;
+    font-weight: 700;
+  }
+
+  &__content {
+    padding-top: 15px;
+  }
+}

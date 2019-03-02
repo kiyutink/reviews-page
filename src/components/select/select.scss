@@ -1,0 +1,55 @@
+.select {
+  position: relative;
+  height: 40px;
+  border: 2px solid cornflowerblue;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &--inactive {
+    border-color: gainsboro;
+  }
+
+  &__text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    &:hover {
+      background-color: rgba(cornflowerblue, 0.2);
+    }
+
+    &--inactive {
+      color: lightslategrey;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &::after {
+      position: relative;
+      top: 2px;
+      left: 3px;
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 5px 0 5px;
+      border-color: lightslategray transparent transparent transparent;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 15px rgba(black, 0.4);
+  }
+}

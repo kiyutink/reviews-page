@@ -1,0 +1,25 @@
+.selectItem {
+  padding: 5px;
+  border-radius: 4px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:hover {
+    background-color: rgba(cornflowerblue, 0.2);
+  }
+
+  &--active {
+    background-color: cornflowerblue;
+    color: white;
+
+    &:hover {
+      background-color: cornflowerblue;
+    }
+  }
+}

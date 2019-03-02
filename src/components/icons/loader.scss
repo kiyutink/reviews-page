@@ -1,0 +1,35 @@
+.loader {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: cornflowerblue;
+    margin: 5px;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation: dot 4s linear infinite;
+        animation-delay: $i - 1 + s;
+      }
+    }
+  }
+}
+
+@keyframes dot {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

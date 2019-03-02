@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.app {
+  padding-top: 180px;
+
+  &__controls {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid cornflowerblue;
+  }
+
+  &__selects {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  &__select {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 200px;
+    margin-right: 20px;
+  }
+
+  &__input {
+    width: 300px;
+  }
+
+  &__starsDescription {
+    padding-bottom: 10px;
+  }
+
+  &__loadingHook {
+    position: relative;
+    top: -40vh;
+  }
+}
