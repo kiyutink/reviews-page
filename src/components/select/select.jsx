@@ -15,7 +15,7 @@ export const Select = ({
   className,
   defaultValue,
   isActive,
-  disabledTitle
+  title
 }) => {
   const [currentItem, setCurrentItem] = useState(defaultValue);
   const [areItemsVisible, setItemsVisiblity] = useState(false);
@@ -42,7 +42,7 @@ export const Select = ({
           setItemsVisiblity(!areItemsVisible);
         }
       }}
-      title={!isActive && disabledTitle ? disabledTitle : null}
+      title={title}
     >
       {
         <div
@@ -77,7 +77,7 @@ Select.propTypes = {
   className: PropTypes.string,
   defaultValue: PropTypes.string,
   isActive: PropTypes.bool,
-  disabledTitle: PropTypes.string
+  title: PropTypes.string
 };
 
 Select.defaultProps = {

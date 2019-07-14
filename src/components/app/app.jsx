@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
   hasMore: getHasMore(state)
 });
 
-let App = ({ hasMore }) => {
+const AppComponent = ({ hasMore }) => {
   const [showReviewsWithStars, setShowReviewsWithStars] = useState({
     1: false,
     2: false,
@@ -49,7 +49,10 @@ let App = ({ hasMore }) => {
                 window.scrollTo(0, 0);
               }}
               isActive={!hasMore}
-              disabledTitle="You can't see oldest first before all the reviews are loaded"
+              title={
+                hasMore &&
+                "You can't see oldest first before all the reviews are loaded"
+              }
             >
               <SelectItem value="newestFirst">Newest First</SelectItem>
               <SelectItem value="oldestFirst">Oldest First</SelectItem>
@@ -58,6 +61,7 @@ let App = ({ hasMore }) => {
               className="app__input"
               value={searchString}
               onChange={setSearchString}
+              placeholder="Search..."
             />
           </div>
           <div className="app__starsDescription">Filter by stars</div>
@@ -76,10 +80,8 @@ let App = ({ hasMore }) => {
   );
 };
 
-App.propTypes = {
+AppComponent.propTypes = {
   hasMore: PropTypes.bool.isRequired
 };
 
-App = connect(mapStateToProps)(App);
-
-export { App };
+export const App = connect(mapStateToProps)(AppComponent);

@@ -49,9 +49,8 @@ const formatDay = timestamp => {
 
 const getTitle = (group, groupedBy) => {
   switch (groupedBy) {
-    case "day": {
+    case "day":
       return formatDay(group.date);
-    }
     case "week":
       return `${formatDay(group.start)} - ${formatDay(group.end)}`;
     case "month":
@@ -59,7 +58,7 @@ const getTitle = (group, groupedBy) => {
   }
 };
 
-class ReviewList extends React.Component {
+class ReviewListComponent extends React.Component {
   static propTypes = {
     reviewGroups: PropTypes.arrayOf(PropTypes.object).isRequired,
     groupBy: PropTypes.string.isRequired,
@@ -70,40 +69,6 @@ class ReviewList extends React.Component {
     hasMore: PropTypes.bool.isRequired,
     oldestFirst: PropTypes.bool.isRequired,
     searchString: PropTypes.string
-  };
-
-  monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
-
-  formatDay = timestamp => {
-    const date = new Date(timestamp);
-    return `${date.getDate()} ${
-      this.monthNames[date.getMonth()]
-    } ${date.getFullYear()}`;
-  };
-
-  getTitle = (group, groupedBy) => {
-    switch (groupedBy) {
-      case "day": {
-        return this.formatDay(group.date);
-      }
-      case "week":
-        return `${this.formatDay(group.start)} - ${this.formatDay(group.end)}`;
-      case "month":
-        return `${monthNames[group.month]} ${group.year}`;
-    }
   };
 
   componentDidMount() {
@@ -213,9 +178,7 @@ class ReviewList extends React.Component {
   }
 }
 
-ReviewList = connect(
+export const ReviewList = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ReviewList);
-
-export { ReviewList };
+)(ReviewListComponent);
